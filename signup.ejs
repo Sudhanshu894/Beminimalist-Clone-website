@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/signup.css"/>
+    <title>Signup</title>
+    
+</head>
+<body  onload="getData('<%=JSON.stringify(obj)%>')">
+    <div id="nav1"></div>
+    <div id="nav2"></div>
+    <form 
+    action="/signup"
+     method="POST"
+      id="signup">
+        <h1>Create Account</h1><br><br>
+        <div id="popup"><ul><li>This email address is already associated with an account. If this account is yours, you can <br> <a href=""> reset your password</a></li></ul></div>
+      <div>
+        <label id="head" for="first_name">FIRST NAME</label><br>
+        <input type="text" value="" name="first_name" id="first_name" required />
+      </div><br>
+      <div>
+        <label id="head" for="last_name">LAST NAME</label><br>
+        <input type="text" value="" name="last_name" id="last_name" required />
+      </div><br>
+      <div>
+        <label id="head" for="email">EMAIL</label><br>
+        <input type="email" value="" name="email" id="email" required />
+      </div><br>
+      <div>
+        <label id="head" for="password">PASSWORD</label><br>
+        <input type="password" value="" name="password" id="password" required/>
+      </div>
+      <div id="btn">
+        <input id="create" type="submit" value="Create" name="submit" />
+      </div>
+    </form>
+    <div id="footer"></div>
+    <script src="/scripts/signup.js"></script>
+</body>
+</html>
+<script type="module">
+    import {navbar, navwithouttop, footer} from "./components/script.js";
+   let nav1=document.getElementById("nav2");
+    nav1.innerHTML=navwithouttop();
+   let foot=document.getElementById("footer");
+  foot.innerHTML=footer();
+
+</script>

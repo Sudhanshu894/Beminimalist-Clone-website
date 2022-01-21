@@ -1,0 +1,51 @@
+*{  
+    font-family: 'Avenir Next',sans-serif;
+}
+#signup{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+}
+#signup input{
+    height:38px;
+    width:98%;
+    border:1px solid rgb(202, 200, 200);
+    font-size: 17px;
+}
+#signup h1{
+    margin: auto;
+}
+#head{
+    line-height: 25px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+#create{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8%;
+}
+#btn{
+    width:102%;
+}
+#popup{
+    display: none;
+    border: 1px solid rgb(187, 13, 13);
+    background-color: rgb(247, 228, 231);
+    color: rgb(184, 8, 8);
+}
+#popup a{
+    text-decoration: none;
+    color:rgb(184, 8, 8);
+}
+
+@media screen and (max-width:750px){
+    #signup{
+        width:70%;
+    }
+}

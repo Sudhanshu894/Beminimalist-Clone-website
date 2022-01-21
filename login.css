@@ -1,0 +1,68 @@
+*{
+    font-family: 'Avenir Next',sans-serif;
+}
+ #login{
+    display:grid;
+    grid-template-columns: repeat(1,100%);
+    width:30%;
+    margin: auto; 
+    margin-top: 60px; 
+}
+#login input{
+    height: 40px;
+    border:1px solid rgb(202, 200, 200);
+    font-size: 16px;
+    width:98%;
+}
+#login h1{
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin: auto;
+}
+#head{
+    line-height: 30px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#line{
+    margin-left: 65%;
+    text-align: right;
+    font-weight:100;
+    color:rgb(70, 69, 69);
+}
+#line a{
+    text-decoration: none;
+    color:rgb(70, 69, 69);
+}
+#popup{
+    display:none;
+    border: 1px solid rgb(189, 8, 8);
+    background-color: rgb(247, 228, 231);
+    color: rgb(184, 8, 8);
+}
+#btn{
+    width: 102%;
+}
+#create{
+    height: 45px;
+    width:100%;
+    background-color: black;
+    color: rgb(252, 249, 249);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8%;
+}
+#signup{
+    color:rgb(70, 69, 69); 
+}
+#signup a{
+    text-decoration: none;
+    color:rgb(70, 69, 69);
+}
+
+@media screen and (max-width:750px){
+    #login{
+        width:70%;
+    }
+}

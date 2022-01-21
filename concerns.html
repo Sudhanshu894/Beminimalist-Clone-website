@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concerns</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="concerns.css"/>
+    <link rel="stylesheet" href="./components/template.css"/>
+</head>
+<body>
+    <div id="nav1"></div>
+    <div id="nav2"></div>
+     <div id="box">
+        <div id="picture">
+            <img id="pic" src="https://cdn.shopify.com/s/files/1/0410/9608/5665/files/skin-regimen-grey-min.png"/>
+        </div>
+        <div id="content">
+            <h1>Find products by skin concerns</h1>
+            <p>Take the guesswork out of your skincare regimen. Find the best ingredients for your specific skin concerns and build your own custom regimen.</p>
+            
+        </div>
+    </div>
+    <div id="container"> 
+        <div class="smalldiv">
+            <h4>REDUCE ACNE/BREAKOUTS</h4>
+            <button class="addbtn" id="firstbtn">+</button>
+            <div id="firstdiv" class="closediv">
+                <h1>Salicylic Acid 2%</h1>
+                <p>A daily gentle exfoliant with 2% salicylic acid that wards off blackheads and keeps your oils in check for that flawless matt look everyone dreams.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+        <div class="smalldiv">
+            <h4>REDUCE HYPERPIGMENTATION</h4>
+            <button class="addbtn" id="secondbtn">+</button>
+            <div id="seconddiv" class="closediv">
+                <h1>Alpha Arbutin 2% + HA 1%</h1>
+                <p>An anti-pigmentation daily serum with Alpha Arbutin dramatically reduces dark spots and blemishes for brighter, even-looking skin.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+        <div class="smalldiv">
+            <h4>REDUCE OILINESS & REDUCE PORES</h4>
+            <button class="addbtn" id="thirdbtn">+</button>
+            <div id="thirddiv" class="closediv">
+                <h1>Niacinamide 10% + Zinc</h1>
+                <p>A nourishing, daily serum packed with pure Vitamin B3 and antibacterial mineral zinc that boosts dermal immunity, keeping your skin resilient and healthy.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+        <div class="smalldiv">
+            <h4>REDUCE FINE LINES & WRINKLES</h4>
+            <button class="addbtn" id="fourthbtn">+</button>
+            <div id="fourthdiv" class="closediv">
+                <h1>Granactive Retinoid 2% (Emulsion)</h1>
+                <p>Turn back the clock on aging and give your skin a youthful vibrancy with this gentle, safe & effective 2% Retinoid serum.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+        <div class="smalldiv">
+            <h4>REDUCE DRYNESS & DRY PATCHES</h4>
+            <button class="addbtn" id="fifthbtn">+</button>
+            <div id="fifthdiv" class="closediv">
+                <h1>Hyaluronic Acid 2% + Vitamin B5</h1>
+                <p>A hydrating booster with a punch of Vitamin B5 that pulls moisture deep into the skin & lock-in there, leaving instant plump, baby-soft skin.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+        <div class="smalldiv">
+            <h4>IMPROVE TEXTURE</h4>
+            <button class="addbtn" id="sixthbtn">+</button>
+            <div id="sixthdiv" class="closediv">
+                <h1>AHA 25% + PHA 5% + BHA 2%</h1>
+                <p>A powerful peeling trio of 25% AHA, 5% PHA & 2 % BHA that provides multi-level exfoliation, both on the surface & inside the pores, giving you a healthy, plump, and glowing skin.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+        <div class="smalldiv">
+            <h4>SURFACE EXFOLIATION</h4>
+            <button class="addbtn" id="seventhbtn">+</button>
+            <div id="seventhdiv" class="closediv">
+                <h1>Lactic Acid 10% + Hyaluronic Acid 1%</h1>
+                <p>A skin-regenerating daily serum with 10% Lactic Acid and 1% Hyaluronic Acid that mildly exfoliates without drying the skin to reveal clear, radiant, and hydrated skin.</p>
+                <button id="viewpdt">View Product</button><br/><br/>
+            </div>
+        </div>
+    </div>  
+    <div id="footer"></div>
+
+</body>
+</html>
+<script src="concerns.js"></script>
+<script type="module">
+      import {navbar, navwithouttop, footer} from "./components/script.js";
+    //   let nav=document.getElementById("nav1");
+    // nav.innerHTML=navbar();
+     let nav1=document.getElementById("nav2");
+      nav1.innerHTML=navwithouttop();
+     let foot=document.getElementById("footer");
+    foot.innerHTML=footer();
+
+</script>

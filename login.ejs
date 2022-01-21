@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/login.css"/>
+    <title>Login</title>
+</head>
+<body onload="getData('<%=JSON.stringify(obj)%>')">
+    <div id="nav1"></div>
+    <div id="nav2"></div>
+    <form 
+    action="/login"
+     method="POST"
+      id="login">
+      <h1>Login</h1><br><br>
+      <div id="popup"><ul><li>Incorrect email or password.</li></ul></div>
+      <div>
+        <label id="head" for="email">EMAIL</label><br>
+        <input type="email" value="" name="email" id="email" required />
+      </div><br>
+      <div>
+        <label id="head" for="password">PASSWORD <span id="line"><a href="">Forgot?</a></span></label><br>
+        <input type="password" value="" name="password" id="password" required/>
+      </div>
+      <div id="btn">
+        <input id="create" type="submit" value="Sign In" name="submit" />
+      </div><br><br>
+      <div id="signup"><a href="/signup">Create account</a></div>
+    </form>
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script type="module">
+    import {navbar, navwithouttop, footer} from "./components/script.js";
+   let nav1=document.getElementById("nav2");
+    nav1.innerHTML=navwithouttop();
+   let foot=document.getElementById("footer");
+  foot.innerHTML=footer();
+
+</script>
+<script src="scripts/login.js"></script>

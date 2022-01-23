@@ -1,0 +1,244 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: fit-content;
+  margin: 50px auto;
+  gap: 30px;
+  align-items: flex-end;
+}
+.display-product {
+  display: flex;
+  gap: 30px;
+}
+.imgdiv > img {
+  width: 100%;
+  height: auto;
+}
+.contentdiv {
+  display: flex;
+  flex-direction: column;
+}
+.maininfo > h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.maininfo > p {
+  color: gray;
+  margin-top: 0;
+}
+.ratingbox {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.pricediv {
+  padding: 10px 0px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+}
+.pricediv > span {
+  font-size: 19px;
+  font-weight: 500;
+}
+.pricediv > span:nth-child(2) {
+  text-decoration: line-through;
+  color: gray;
+}
+.btndiv {
+  display: flex;
+  gap: 20px;
+}
+.quantitydiv {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  align-items: center;
+  justify-content: center;
+}
+.quantitydiv > div {
+  padding: 10px;
+  box-sizing: border-box;
+}
+form > button[type="submit"] {
+  width: fit-content;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.info1,
+.info2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0px;
+}
+hr {
+  margin: 10px 0;
+}
+.info1 > h2,
+.info2 > h2 {
+  font-size: 15px;
+}
+.info1 > p,
+.info2 > ul > li {
+  font-size: 13px;
+  padding: 5px 0;
+}
+.info1 > p > span {
+  font-weight: 600;
+}
+hr {
+  height: 10px;
+  background-color: gray;
+}
+.info3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.info3 > h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.info3 > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.info3 > div > div {
+  display: flex;
+  gap: 5px;
+}
+.resultbox {
+  padding: 10px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  background-color: peachpuff;
+  width: 73%;
+}
+.resultbox > h2 {
+  font-size: 15px;
+  margin: 0;
+}
+.info_1,
+.info_2 {
+  width: 70%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.info1_img {
+  width: 70%;
+  margin: 0px auto;
+}
+.info1_img > img {
+  width: 100%;
+  height: auto;
+}
+.info1_content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.heading {
+  font-size: 60px;
+  font-weight: 900;
+  padding: 20px;
+  box-sizing: border-box;
+  line-height: 90px;
+  color: rgb(56, 56, 56);
+}
+.info2_content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ingredients {
+  width: 100%;
+  padding: 20px 15%;
+  box-sizing: border-box;
+  background-color: #e9e8dd;
+}
+.ing_head {
+  font-size: 25px;
+  font-weight: 500;
+}
+.ingredients > p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.faq {
+  width: 70%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.faq_head {
+  font-size: 25px;
+  font-weight: 500;
+}
+.faq > div > h3 {
+  font-size: 16px;
+}
+.faq > div > p {
+  font-size: 14px;
+}
+@media screen and (max-width: 1000px) {
+  .display {
+    width: 100%;
+  }
+  .display-product {
+    flex-direction: column;
+  }
+  .imgdiv {
+    width: 50%;
+    margin: 0px auto;
+  }
+  .contentdiv {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .resultbox {
+    width: 100%;
+  }
+  .info_1,
+  .info_2 {
+    width: 100%;
+  }
+  .ingredients {
+    padding: 20px;
+  }
+  .faq {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}

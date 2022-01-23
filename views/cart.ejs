@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image"
+      href="components/images/WhatsApp Image 2021-12-19 at 6.38.10 PM.jpeg"
+    />
+    <title>Cart page</title>
+    <!-- aos cdn link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/template.css" />
+    <link rel="stylesheet" href="/styles/cart.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <div>
+        <h1>Cart</h1>
+      </div>
+      <div class="displaycart">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>QUANTITY</th>
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="billing"></div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script type="module">
+  import {
+    navwithouttop,
+    footer,
+    navfunction,
+    searchanimation,
+  } from "/scripts/script.js";
+  document.querySelector(".navbar").innerHTML = navwithouttop();
+  document.querySelector("footer").innerHTML = footer();
+  let cart = [];
+  ("<% usercart.forEach((item,i)=>{%>");
+  cart.push({});
+  cart["<%=i%>"].id = "<%=item._id%>";
+  cart["<%=i%>"].title = "<%=item.product_id.title%>";
+  cart["<%=i%>"].prodprice = "<%=item.total_price%>";
+  cart["<%=i%>"].qty = "<%=item.product_qty%>";
+  cart["<%=i%>"].url = "<%=item.product_id.url%>";
+  ("<%})%>");
+  localStorage.setItem("store", JSON.stringify(cart));
+
+  const appendcart = (cart, index) => {
+    let maindiv = document.querySelector("tbody");
+    maindiv.innerHTML = null;
+    console.log(cart);
+    cart.forEach(({ id, title, prodprice, qty, url }) => {
+      let tr = document.createElement("tr");
+      tr.setAttribute("data-aos", "fade-up");
+      let imgdiv = document.createElement("td");
+      let img = document.createElement("img");
+      img.src = url;
+      imgdiv.append(img);
+      let namediv = document.createElement("td");
+      let name = document.createElement("p");
+      name.textContent = title;
+      let form = document.createElement("form");
+      form.setAttribute("action", `/cart/${id}`);
+      form.setAttribute("method", "GET");
+      let hiddeninput = document.createElement("input");
+      hiddeninput.type = "hidden";
+      hiddeninput.name = "id";
+      hiddeninput.value = id;
+      let btn = document.createElement("button");
+      btn.type = "submit";
+      btn.textContent = "Remove";
+      form.append(hiddeninput, btn);
+      namediv.append(name, form);
+      let qtydiv = document.createElement("td");
+      let count = document.createElement("div");
+      count.textContent = qty;
+      qtydiv.append(count);
+      let total = document.createElement("td");
+      let price = document.createElement("p");
+      price.textContent = `₹${prodprice}`;
+      total.append(price);
+      tr.append(imgdiv, namediv, qtydiv, total);
+      maindiv.append(tr);
+    });
+  };
+  let sum = 0;
+  for (var i = 0; i < cart.length; i++) {
+    sum += Number(cart[i].prodprice);
+  }
+  let totalprice = sum;
+  appendcart(cart);
+  if (cart.length > 0) {
+    document.getElementById("indicator").style.display = "block";
+  } else {
+    document.getElementById("indicator").style.display = "none";
+  }
+  navfunction();
+  searchanimation();
+
+  let billing = document.querySelector(".billing");
+  billing.innerHTML = `<div class="total">
+          <p>Subtotal</p>
+          <p>₹${totalprice}</p>
+        </div>
+        <div>
+          <p>Shipping, taxes and discount codes calculated at checkout.</p>
+        </div>
+        <div class="btns">
+          <a href="#"><button>Update cart</button></a>
+          <a href="/checkout"><button>Check out</button></a>
+        </div>`;
+</script>
+<!-- aos script  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    delay: 1,
+  });
+</script>

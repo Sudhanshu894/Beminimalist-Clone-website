@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image"
+      href="components/images/WhatsApp Image 2021-12-19 at 6.38.10 PM.jpeg"
+    />
+    <title>Checkout page</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/checkout.css" />
+  </head>
+  <style>
+    .head {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .head > h4 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+    .head > p {
+      font-size: 15px;
+    }
+    .email-field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .email-field > input {
+      width: 97%;
+      height: 40px;
+      border-radius: 8px;
+      padding-left: 20px;
+      font-size: 14px;
+      border: 1px solid gray;
+    }
+    .email-field > div,
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .email-field > div > span,
+    .checkbox > span {
+      font-weight: 400;
+      font-size: 15px;
+    }
+    .email-field > div > input,
+    .checkbox > input {
+      width: 15px;
+      height: 15px;
+    }
+    .shipping {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .shipping > input,
+    select,
+    .name-field > input {
+      width: 100%;
+      height: 40px;
+      padding-left: 20px;
+      font-size: 14px;
+      border: 1px solid gray;
+      border-radius: 8px;
+    }
+    select {
+      height: 45px;
+    }
+    .shipping > input {
+      width: 98%;
+    }
+    .name-field {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .name-field > input {
+      width: 45%;
+    }
+    .location {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .location > input {
+      width: 28%;
+      height: 40px;
+      border: 1px solid gray;
+      border-radius: 8px;
+      padding-left: 20px;
+      font-size: 14px;
+    }
+    .shipping > h1 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+    .contact {
+      position: relative;
+    }
+    .contact > input {
+      width: 98%;
+      height: 40px;
+      border: 1px solid gray;
+      border-radius: 8px;
+      font-size: 14px;
+      padding-left: 20px;
+    }
+    .contact > span {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 17px;
+      color: #313131;
+    }
+  </style>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <div class="form">
+        <div class="navigation">
+          <div>minimalist_</div>
+          <div class="steps">
+            <p>
+              <span>Cart</span> <span><i class="fas fa-chevron-right"></i></span
+              ><span>Information</span>
+              <span><i class="fas fa-chevron-right"></i></span>Shipping
+              <span><i class="fas fa-chevron-right"></i></span> Payment
+            </p>
+          </div>
+        </div>
+        <div class="head">
+          <h4>Contact information</h4>
+          <p>Already have an account? <a href="#">Login</a></p>
+        </div>
+        <div class="email-field">
+          <input type="email" placeholder="Email" id="email" />
+          <div>
+            <input type="checkbox" />
+            <span>Email me with news and offers</span>
+          </div>
+        </div>
+        <div class="shipping">
+          <h1>Shipping address</h1>
+          <select name="" id="">
+            <option value="">Country/region</option>
+            <option value="india">India</option>
+          </select>
+          <div class="name-field">
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Last name" />
+          </div>
+          <input type="text" placeholder="Address" id="address" />
+          <div class="location">
+            <input type="text" placeholder="City" />
+            <input type="text" placeholder="State" />
+            <input type="number" placeholder="PIN code" />
+          </div>
+          <div class="contact">
+            <input type="number" placeholder="Phone" />
+            <span><i class="fas fa-question-circle"></i></span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" />
+            <span>Save this information for next time</span>
+          </div>
+          <div class="btndiv">
+            <div class="return">
+              <span><i class="fas fa-chevron-left"></i></span>
+              <p>Return to cart</p>
+            </div>
+            <button>Continue to shipping</button>
+          </div>
+        </div>
+      </div>
+      <div class="order-details">
+        <div class="showcart"></div>
+        <div class="discountbox">
+          <input type="text" placeholder="Discount code" />
+          <button>Apply</button>
+        </div>
+        <div class="subtotal"></div>
+        <div class="totalbill"></div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script type="module">
+  import { appenditems } from "/scripts/script.js";
+  let store = JSON.parse(localStorage.getItem("store"));
+  console.log(store);
+  let maindiv = document.querySelector(".showcart");
+
+  appenditems(store, maindiv);
+  document.querySelector(".return").addEventListener("click", () => {
+    window.location.href = "/cart";
+  });
+  document.querySelector(".btndiv > button").addEventListener("click", () => {
+    const data = {
+      email: document.getElementById("email").value,
+      address: document.getElementById("address").value,
+    };
+    localStorage.setItem("orderinfo", JSON.stringify(data));
+    window.location.href = "/verification";
+  });
+</script>

@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 70%;
+  margin: 20px auto 200px auto;
+}
+.track > h1 {
+  font-size: 30px;
+}
+.tracking-details {
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border: 1px solid #31313133;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  align-items: flex-start;
+  height: fit-content;
+}
+.order,
+.tracknum {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order > div > input,
+.tracknum > div > input {
+  height: 45px;
+  font-size: 17px;
+  border-radius: 8px;
+  width: 150%;
+  margin-top: 5px;
+  border: 1px solid #31313175;
+}
+.order > div > p,
+.tracknum > div > p {
+  font-size: 17px;
+  font-weight: 450;
+}
+.order > button,
+.tracknum > button {
+  width: fit-content;
+  padding: 5px 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  background-color: #111;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+}
+.mid-line {
+  width: 5px;
+  border-left: 1px dashed #31313175;
+  height: 400px;
+}
+@media screen and (max-width: 1000px) {
+  .tracking-details {
+    flex-direction: column;
+  }
+}

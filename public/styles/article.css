@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#head {
+  margin-top: -50px;
+}
+
+.article {
+  /* border: 1px solid red; */
+  height: fit-content;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.upmid {
+  height: fit-content;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.auth {
+  text-align: center;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 70px;
+  line-height: inherit;
+  display: block;
+  margin-right: 0 !important;
+}
+
+.title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.img {
+  width: 70%;
+  margin: 0px auto;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.img > img {
+  width: 50%;
+  height: 100%;
+}
+.midtext {
+  width: 50%;
+  margin: 0px auto;
+}
+@media screen and (min-width: 1000px) {
+  .img {
+    width: 100%;
+    height: 30vh;
+  }
+}
+.midtext {
+  margin: 50px auto 10px auto;
+  font-size: 15px;
+  height: fit-content;
+  width: 50%;
+}
+.borderleft {
+  border-left: 5px solid rgba(11, 222, 230, 0.911);
+  padding-left: 10px;
+}
+#k::first-letter {
+  font-size: 46px;
+  font-size: 80px;
+  line-height: 70px;
+  font-family: Barlow;
+  font-weight: 600;
+  margin-left: -5%;
+}
+.ref {
+  background-color: black;
+  height: 40px;
+}
+.fa-plus {
+  margin-right: 5%;
+  color: white;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+#reftitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-top: 10px;
+}
+.relatedpost {
+  /* border: 1px solid red; */
+  height: fit-content;
+  background-color: #f8f8f8;
+  margin-top: 10%;
+}
+#lastpost {
+  /* border: 1px solid; */
+  margin: auto;
+  margin-top: 12%;
+}
+#lastpost > h3 {
+  text-align: center;
+  font-family: sans-serif;
+}
+.grid1 {
+  margin-left: 7%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.des a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+#des1 {
+  font-size: 12px;
+  color: gray;
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  /* STYLES HERE */
+  .midtext {
+    margin: 1% auto;
+    font-size: 16px;
+    height: fit-content;
+    width: 90%;
+  }
+  .upmid {
+    margin: 0px auto;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 1%;
+    height: fit-content;
+    width: 80%;
+  }
+  .img {
+    width: 70%;
+    height: 40vh;
+  }
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 1000px) {
+  /* STYLES HERE */
+  .midtext {
+    margin: 1% auto;
+    font-size: 16px;
+    height: fit-content;
+    width: 90%;
+  }
+  .upmid {
+    margin-left: 20%;
+    margin-right: 350px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 1%;
+    height: fit-content;
+    width: 40%;
+  }
+  .img {
+    width: 70%;
+    margin: 0px auto;
+  }
+  .img > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-device-width: 700px) and (max-device-width: 1000px) {
+  /* STYLES HERE */
+  #lastpost {
+    margin: auto;
+    margin-top: 12%;
+  }
+  #lastpost > h3 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .grid1 {
+    margin-left: 20%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  /* STYLES HERE */
+  #lastpost {
+    /* border: 1px solid; */
+    margin: auto;
+    margin-top: 12%;
+  }
+  #lastpost > h3 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .grid1 {
+    margin: auto;
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 500px) {
+  /* STYLES HERE */
+  #lastpost {
+    /* border: 1px solid; */
+    margin: auto;
+    margin-top: 12%;
+  }
+  #lastpost > h3 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .grid1 {
+    margin: auto;
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 500px) {
+  /* STYLES HERE */
+  .midtext {
+    margin-left: 15%;
+    margin-right: 350px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 1%;
+    height: fit-content;
+    width: 90%;
+  }
+  .upmid {
+    margin-left: 10%;
+    margin-right: 350px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 1%;
+    height: fit-content;
+    width: 40%;
+  }
+  .img > img {
+    width: 570px;
+    height: 321px;
+  }
+}

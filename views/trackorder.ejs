@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Your order</title>
+    <link
+      rel="shortcut icon"
+      type="image"
+      href="components/images/WhatsApp Image 2021-12-19 at 6.38.10 PM.jpeg"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/template.css" />
+    <link rel="stylesheet" href="styles/track.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="track">
+      <h1>Track Your Order</h1>
+      <div class="tracking-details">
+        <div class="order">
+          <div>
+            <p>Order Number</p>
+            <input type="number" id="order" />
+          </div>
+          <div>
+            <p>Email</p>
+            <input type="email" id="email" />
+          </div>
+          <button>Track</button>
+        </div>
+        <div class="mid-line"></div>
+        <div class="tracknum">
+          <div>
+            <p>Tracking Number</p>
+            <input type="number" id="track" />
+          </div>
+          <button>Track</button>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script type="module">
+  import {
+    navwithouttop,
+    footer,
+    navfunction,
+    searchanimation,
+  } from "/scripts/script.js";
+  document.querySelector(".navbar").innerHTML = navwithouttop();
+  document.querySelector("footer").innerHTML = footer();
+  navfunction();
+  searchanimation();
+</script>

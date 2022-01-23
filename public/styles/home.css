@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: Helvetica, sans-serif, Arial;
+}
+
+body {
+  margin: 0 auto;
+}
+.top-wrapper {
+  width: 100%;
+  height: 400px;
+  background-color: #000000;
+}
+.heading {
+  width: fit-content;
+  height: 80px;
+  margin: 80px auto 0px auto;
+}
+.heading > h1 {
+  color: white;
+  font-size: 55px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+/* section 1 */
+.section-1 {
+  width: 65%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto 50px;
+  position: relative;
+  top: -100px;
+}
+.img-content {
+  text-align: center;
+  margin: 70px auto 0px auto;
+}
+.img-content > h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px auto 10px auto;
+}
+.img-content > p {
+  padding: 10px 40px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 25px;
+}
+
+/* bestseller products column  */
+.bestsellers,
+.recent-items {
+  width: 75%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  margin: 0px auto;
+  position: relative;
+}
+.bestsellers > h2,
+.recent-items > h2 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.bestsellers > p,
+.recent-items > p {
+  position: absolute;
+  right: 150px;
+  top: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+.bestseller-items,
+.recent-products {
+  display: flex;
+  justify-content: center;
+}
+.itembox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  display: grid;
+}
+.itembox > button {
+  width: 90%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+}
+.itemimgdiv {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+}
+.itemimgdiv > img {
+  width: 100%;
+  height: auto;
+}
+.itemcontentdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.itemcontentdiv > p {
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+.itemcontentdiv > p:nth-child(2) {
+  font-weight: 300;
+  font-size: 15px;
+}
+.itemcontentdiv > div > span {
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+.itemcontentdiv > div > span:nth-child(2) {
+  text-decoration: line-through;
+  color: gray;
+}
+/* section-2 */
+.section-2 {
+  width: 100%;
+  height: 500px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 200px auto;
+  overflow-x: hidden;
+}
+.sec2-box {
+  min-width: 90vw;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.sec2-img {
+  height: 350px;
+}
+.sec2-img > img {
+  width: auto;
+  height: 100%;
+}
+.sec2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  width: 45%;
+  justify-content: center;
+  padding-left: 30px;
+}
+.sec2-content > h2 {
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.sec2-content > p {
+  font-size: 19px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 70%;
+}
+.sec2-content > button {
+  width: fit-content;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+/* stories column */
+.stories {
+  width: 100%;
+  height: fit-content;
+  margin: 50px auto 100px;
+}
+.stories > h2 {
+  width: fit-content;
+  margin: 30px auto;
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.story-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.story-box > div {
+  width: 350px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+.story-box > div > div:nth-child(3) {
+  font-weight: 700;
+}
+.story-box > div > div:nth-child(3)::before {
+  content: "—";
+  padding-right: 5px;
+}
+
+/* blog section  */
+.blog {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 150px auto;
+  align-items: center;
+}
+.blog > h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: fit-content;
+  margin: 30px auto;
+}
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  gap: 40px;
+  margin: 0px auto;
+  justify-content: center;
+}
+.tip-box {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-img {
+  width: 100%;
+  height: 70%;
+}
+.blog-img > img {
+  width: 100%;
+  height: 100%;
+}
+.blog-title > p {
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+
+.chat-bar-collapsible {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.collapsible {
+  background-color: #181818;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 350px;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.full-chat-block {
+  width: 350px;
+  background: white;
+  text-align: center;
+  overflow: auto;
+  scrollbar-width: none;
+  height: max-content;
+  transition: max-height 0.2s ease-out;
+}
+
+.outer-container {
+  min-height: 500px;
+  bottom: 0%;
+  position: relative;
+}
+
+.chat-container {
+  max-height: 500px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  scroll-behavior: smooth;
+  hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-bar-input-block {
+  display: flex;
+  float: left;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  width: 25%;
+  float: right;
+  font-size: 20px;
+}
+
+#chat-icon:hover {
+  opacity: 0.7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+  width: 75%;
+}
+
+.input-box {
+  float: left;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  color: #000;
+  background-color: white;
+  outline: none;
+}
+
+.userText {
+  color: white;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: right;
+  clear: both;
+}
+
+.userText span {
+  line-height: 1.5em;
+  display: inline-block;
+  background: #313131;
+  padding: 10px;
+  border-radius: 8px;
+  border-bottom-right-radius: 2px;
+  max-width: 80%;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  animation: floatup 0.5s forwards;
+}
+
+.botText {
+  color: #000;
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+}
+
+.botText span {
+  line-height: 1.5em;
+  display: inline-block;
+  background: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+  border-bottom-left-radius: 2px;
+  max-width: 80%;
+  margin-left: 10px;
+  animation: floatup 0.5s forwards;
+}
+
+@keyframes floatup {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .full-chat-block {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .chat-bar-collapsible {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+  .collapsible {
+    width: 100%;
+    border: 0px;
+    border-top: 3px solid white;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .top-img {
+    width: 100%;
+  }
+  .top-img > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bestsellers {
+    overflow-x: scroll;
+  }
+  .bestseller-items {
+    width: 1500px;
+  }
+}

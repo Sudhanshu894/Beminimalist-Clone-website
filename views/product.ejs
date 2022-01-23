@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link
+      rel="shortcut icon"
+      type="image"
+      href="components/images/WhatsApp Image 2021-12-19 at 6.38.10 PM.jpeg"
+    />
+    <!-- aos cdn link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/template.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    .container {
+      width: 70%;
+      height: fit-content;
+      margin: 0px auto;
+    }
+    .head {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 50px auto;
+      width: fit-content;
+    }
+    .content {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+      position: relative;
+      gap: 50px;
+    }
+    .sortbar {
+      width: 300px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 200px;
+    }
+    .sortbar > select {
+      height: 50px;
+      width: 100%;
+      border: 1px solid black;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 19px;
+    }
+    .categorize {
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .categorize > h2 {
+      font-size: 20px;
+    }
+    .catgry > div > p {
+      font-size: 20px;
+      padding: 5px 0px;
+      font-weight: 350;
+      cursor: pointer;
+    }
+    .catgry > div > p > a {
+      color: black;
+      text-decoration: none;
+    }
+    .catgry > button {
+      margin: 30px 5px 20px 5px;
+      width: fit-content;
+      height: 40px;
+      padding: 0px 15px;
+      box-sizing: border-box;
+      font-size: 17px;
+      border: 0.5px solid rgba(0, 0, 0, 0.418);
+      background-color: transparent;
+      font-weight: 350;
+    }
+    .afterclick {
+      transition: all 0.3s ease-in-out;
+    }
+    .displayitems {
+      display: flex;
+      width: calc(100%-300px);
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .reviewbox {
+      display: flex;
+      gap: 10px;
+    }
+    .pricediv {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .pricediv > span {
+      font-weight: 500;
+    }
+    .pricediv > span:nth-child(1) {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+  <body>
+    <div class="navbar"></div>
+
+    <div class="container">
+      <div class="head">Products</div>
+      <div class="content">
+        <div class="sortbar">
+          <select name="" id="select">
+            <option value="--">Sort</option>
+            <option value="featured">Featured</option>
+            <option value="bestseller">Best Selling</option>
+            <option value="atoz">Alphabetically,A-Z</option>
+            <option value="ztoa">Alphabetically,Z-A</option>
+            <option value="lowprice">Price,Low to High</option>
+            <option value="highprice">Price,High to Low</option>
+            <option value="highrate">Review,High to low</option>
+            <option value="lowrate">Review,low to High</option>
+          </select>
+
+          <div class="categorize">
+            <h2>View all</h2>
+            <div class="catgry">
+              <div class="showed">
+                <p><a href="products?category=Acne-marks">Acne-marks</a></p>
+                <p><a href="products?category=Alopecia">Alopecia</a></p>
+                <p><a href="products?category=Anti-aging">Anti-aging</a></p>
+                <p>
+                  <a href="products?category=Anti-Hairfall">Anti-Hairfall</a>
+                </p>
+                <p>
+                  <a href="products?category=Anti-inflammatory"
+                    >Anti-inflammatory</a
+                  >
+                </p>
+              </div>
+              <div class="afterclick">
+                <p><a href="products?category=Brightening">Brightening</a></p>
+                <p><a href="products?category=Cleanser">Cleanser</a></p>
+                <p><a href="products?category=Dart spots">Dart spots</a></p>
+                <p><a href="products?category=Even tone">Even tone</a></p>
+                <p><a href="products?category=Exfoliation">Exfoliation</a></p>
+                <p><a href="products?category=Fine lines">Fine lines</a></p>
+                <p><a href="products?category=Hair Growth">Hair Growth</a></p>
+                <p><a href="products?category=Hydration">Hydration</a></p>
+                <p>
+                  <a href="products?category=Hyperpigmentation"
+                    >Hyperpigmentation</a
+                  >
+                </p>
+                <p><a href="products?category=Melasma">Melasma</a></p>
+                <p>
+                  <a href="products?category=Moisturization">Moisturization</a>
+                </p>
+                <p><a href="products?category=Oil balance">Oil balance</a></p>
+                <p>
+                  <a href="products?category=Pore cleaning">Pore cleaning</a>
+                </p>
+                <p>
+                  <a href="products?category=Pore tightening"
+                    >Pore tightening</a
+                  >
+                </p>
+                <p>
+                  <a href="products?category=Remove blackheads"
+                    >Remove blackheads</a
+                  >
+                </p>
+                <p><a href="products?category=Skin texture">Skin texture</a></p>
+                <p><a href="products?category=Sun damage">Sun damage</a></p>
+                <p><a href="products?category=Toner">Toner</a></p>
+              </div>
+              <button id="showcat">Show less</button>
+            </div>
+          </div>
+        </div>
+        <div class="displayitems" data-aos="fade-in"></div>
+      </div>
+    </div>
+    <div class="product-container"></div>
+    <footer></footer>
+  </body>
+</html>
+<script type="module">
+  import {
+    navwithouttop,
+    footer,
+    itemstemplate,
+    productappend,
+    items,
+    navfunction,
+    searchanimation,
+  } from "/scripts/script.js";
+  let n = "<%=products.length%>";
+  let pro = [];
+  ("<% products.forEach((item,i)=>{%>");
+  pro.push({});
+  pro["<%=i%>"].id = "<%=item._id%>";
+  pro["<%=i%>"].title = "<%=item.title%>";
+  pro["<%=i%>"].reviews = "<%=item.reviews%>";
+  pro["<%=i%>"].desc = "<%=item.desc%>";
+  pro["<%=i%>"].tprice = "<%=item.tprice%>";
+  pro["<%=i%>"].dprice = "<%=item.dprice%>";
+  pro["<%=i%>"].category = "<%=item.category%>";
+  pro["<%=i%>"].url = "<%=item.url%>";
+  pro["<%=i%>"].quantity = "<%=item.quantity%>";
+
+  ("<%})%>");
+  document.querySelector(".navbar").innerHTML = navwithouttop();
+  document.querySelector("footer").innerHTML = footer();
+  let cat = document.querySelector(".afterclick");
+  var count = 0;
+  const showcat = () => {
+    count++;
+    if (count % 2 == 1) {
+      cat.style.display = "block";
+      cat.style.transform = "scale(1)";
+    } else {
+      cat.style.transform = "scale(0)";
+      cat.style.display = "none";
+    }
+    console.log(count);
+  };
+  let btn = document.getElementById("showcat");
+  btn.addEventListener("click", () => {
+    showcat();
+  });
+
+  let products = items;
+  let itemcontainer = document.querySelector(".product-container");
+  itemcontainer.innerHTML = itemstemplate("Top Selling Products");
+  let maindiv = document.querySelector(".recent-products");
+  productappend(products, maindiv);
+  navfunction();
+  searchanimation();
+  let cart = JSON.parse(localStorage.getItem("store"));
+  if (cart.length > 0) {
+    document.getElementById("indicator").style.display = "block";
+  } else {
+    document.getElementById("indicator").style.display = "none";
+  }
+  let selectionprod = document.getElementById("select");
+  selectionprod.addEventListener("change", () => {
+    let sort = selectionprod.value;
+    if (sort === "featured") {
+      window.location.href = "/products";
+    } else if (sort === "bestseller") {
+      let sortarr = pro.sort((a, b) => {
+        return b.reviews - a.reviews;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    } else if (sort === "lowrate") {
+      let sortarr = pro.sort((a, b) => {
+        return a.reviews - b.reviews;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    } else if (sort === "highrate") {
+      let sortarr = pro.sort((a, b) => {
+        return b.reviews - a.reviews;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    } else if (sort === "lowprice") {
+      let sortarr = pro.sort((a, b) => {
+        return a.dprice - b.dprice;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    } else if (sort === "highprice") {
+      let sortarr = pro.sort((a, b) => {
+        return b.dprice - a.dprice;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    } else if (sort === "atoz") {
+      var sortarr = pro.sort((a, b) => {
+        return a.title < b.title ? -1 : a.name < b.name ? 1 : 0;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    } else if (sort === "ztoa") {
+      let sortarr = pro.sort((a, b) => {
+        return a.title > b.title ? -1 : a.name < b.name ? 1 : 0;
+      });
+      console.log(sortarr.length, sortarr);
+      appendproducts(sortarr);
+    }
+  });
+  let maindiv2 = document.querySelector(".displayitems");
+  const appendproducts = (pro) => {
+    maindiv2.innerHTML = null;
+    pro.map((items) => {
+      let itemdiv = document.createElement("div");
+      itemdiv.setAttribute("class", "itemdiv");
+      itemdiv.setAttribute("data-aos", "zoom-in-up");
+      itemdiv.addEventListener("click", () => {
+        window.location.href = `/products/${items.id}`;
+      });
+      let imgdiv = document.createElement("div");
+      imgdiv.setAttribute("class", "imgdiv");
+      let img = document.createElement("img");
+      img.src = items.url;
+      imgdiv.append(img);
+
+      let contentdiv = document.createElement("div");
+      contentdiv.setAttribute("class", "contentdiv");
+      let name = document.createElement("p");
+      name.textContent = items.title;
+      let reviewbox = document.createElement("div");
+      reviewbox.setAttribute("class", "reviewbox");
+      let icondiv = document.createElement("div");
+      if (items.reviews > 700) {
+        for (var i = 0; i < 5; i++) {
+          let iconspan = document.createElement("span");
+          if (i < 4) {
+            iconspan.innerHTML = `<i class="fas fa-star"></i>`;
+          } else {
+            iconspan.innerHTML = `<i class="fas fa-star-half-alt"></i>`;
+          }
+          icondiv.append(iconspan);
+        }
+      } else if (items.reviews < 700) {
+        for (var i = 0; i < 5; i++) {
+          let iconspan = document.createElement("span");
+          if (i < 4) {
+            iconspan.innerHTML = `<i class="fas fa-star"></i>`;
+          } else {
+            iconspan.innerHTML = `<i class="far fa-star"></i>`;
+          }
+          icondiv.append(iconspan);
+        }
+      }
+      let rating = document.createElement("span");
+      rating.textContent = `${items.reviews} reviews`;
+      reviewbox.append(icondiv, rating);
+
+      let description = document.createElement("p");
+      description.textContent = items.desc;
+
+      let pricediv = document.createElement("div");
+      pricediv.setAttribute("class", "pricediv");
+      let total = document.createElement("span");
+      total.textContent = `₹${items.tprice}`;
+      let discount = document.createElement("span");
+      discount.textContent = `₹${items.dprice}`;
+      pricediv.append(total, discount);
+      contentdiv.append(name, reviewbox, description, pricediv);
+      itemdiv.append(imgdiv, contentdiv);
+      maindiv2.append(itemdiv);
+    });
+  };
+  appendproducts(pro);
+  function show(value) {
+    var categorizeitem = [];
+    for (var i = 0; i < products.length; i++) {
+      if (value === products[i].category) {
+        categorizeitem.push(products[i]);
+      }
+    }
+    appendproducts(categorizeitem);
+  }
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    delay: 100,
+  });
+</script>

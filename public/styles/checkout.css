@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+  height: fit-content;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 30px;
+}
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 0px;
+  box-sizing: border-box;
+  height: fit-content;
+}
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.navigation > div {
+  font-size: 60px;
+  font-weight: 600;
+}
+.steps > p {
+  font-size: 13px;
+  color: gray;
+  font-weight: 500;
+}
+.steps > p > span {
+  padding: 0px 5px;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: black;
+}
+.btndiv {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+.btndiv p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.return {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.return > span {
+  font-size: 14px;
+}
+.btndiv > button {
+  padding: 5px 20px;
+  box-sizing: border-box;
+  background-color: #111;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+}
+.order-details {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 100px 40px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  border-left: 1px solid #3131313b;
+}
+.showcart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.itemdiv {
+  display: flex;
+  padding: 10px 5px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.imgdiv {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+.imgdiv > img {
+  width: 60%;
+  height: auto;
+}
+.imgdiv > div {
+  position: absolute;
+  right: 30px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: -5px;
+  background-color: #313131;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+.contentdiv {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentdiv > p {
+  font-weight: 500;
+  font-size: 15px;
+}
+.contentdiv > p:last-child {
+  font-size: 16px;
+}
+.discountbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-top: 1px solid #3131315e;
+  border-bottom: 1px solid #3131315e;
+}
+.discountbox > input {
+  width: 60%;
+  height: 45px;
+  padding-left: 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.discountbox > button {
+  padding: 5px 25px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: none;
+  background-color: #111;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #3131315e;
+}
+.subtotal > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.totalbill {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: 1px solid #3131315e;
+}
+.totalbill > p:nth-child(1) {
+  font-size: 17px;
+  font-weight: 400;
+}
+.totalbill > p > span {
+  font-size: 13px;
+  color: grey;
+  padding: 0px 5px;
+  box-sizing: border-box;
+}
+.totalbill > p:last-child {
+  font-size: 22px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1150px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 90%;
+    align-items: center;
+  }
+  .form {
+    padding: 0;
+    margin: 0;
+  }
+  .order-details {
+    width: fit-content;
+    padding: 10px 50px;
+    width: 70%;
+    margin-top: 50px;
+    border-radius: 25px;
+    border: 1px solid #3131313b;
+  }
+  .imgdiv > img {
+    width: 40%;
+    height: auto;
+  }
+  .imgdiv > div {
+    right: 55px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+  }
+  .itemdiv {
+    gap: 0px;
+  }
+  .contentdiv > p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image"
+      href="components/images/WhatsApp Image 2021-12-19 at 6.38.10 PM.jpeg"
+    />
+    <title>Knowledge Page</title>
+    <!-- aos cdn link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/knowledge.css" />
+    <link rel="stylesheet" href="/styles/template.css" />
+  </head>
+
+  <body>
+    <div class="navbar"></div>
+    <div id="container">
+      <div id="guides">
+        <h1>Guides - Ingredients you should know</h1>
+        <div class="guidesimg" id="guidesimg"></div>
+        <button id="guidbtn">View More</button>
+      </div>
+      <div id="skin">
+        <h1>Skincare - Words of wisdom</h1>
+        <div class="guidesimg" id="skincare"></div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+
+<script type="module">
+  import {
+    navwithouttop,
+    footer,
+    navfunction,
+    searchanimation,
+  } from "/scripts/script.js";
+  document.querySelector(".navbar").innerHTML = navwithouttop();
+  document.querySelector("footer").innerHTML = footer();
+  import append from "/scripts/show.js";
+  let guided = document.getElementById("guidesimg");
+
+  let skincaredata = document.getElementById("skincare");
+
+  document.getElementById("guidbtn").addEventListener("click", () => {
+    window.location.href = "/viewmore";
+  });
+  navfunction();
+  searchanimation();
+
+  let blog = [];
+  ("<% blogs.forEach((item,i)=>{%>");
+  ("<% if (i < 19) { %>");
+  blog.push({});
+  blog["<%=i%>"].id = "<%=item._id%>";
+  blog["<%=i%>"].title = "<%=item.title%>";
+  blog["<%=i%>"].category = "<%=item.category%>";
+  blog["<%=i%>"].url = "<%=item.url%>";
+  ("<%}%>");
+  ("<%})%>");
+  append(blog, guided);
+  console.log(blog);
+  let blog2 = [];
+  ("<% blogs.forEach((items,index)=>{%>");
+  ("<% if (index < 6) { %>");
+  blog2.push({});
+  blog2["<%=index%>"].id = "<%=items._id%>";
+  blog2["<%=index%>"].title = "<%=items.title%>";
+  blog2["<%=index%>"].category = "<%=items.category%>";
+  blog2["<%=index%>"].url = "<%=items.url%>";
+  ("<%}%>");
+  ("<%})%>");
+  append(blog2, skincaredata);
+</script>
+<!-- aos script  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    delay: 200,
+  });
+</script>
